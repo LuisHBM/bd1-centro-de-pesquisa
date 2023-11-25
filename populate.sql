@@ -50,18 +50,86 @@ INSERT INTO centro_de_pesquisa.bairro (cidade_idcidade, nome) VALUES
     (15, 'Asa Sul');
 
 INSERT INTO centro_de_pesquisa.`conta corrente` (agência, conta, digito_verificador, nome_do_banco) VALUES
-    ('1234', '987654321', '1', 'Banco do Brasil'),
-    ('6754', '987654321', '6', 'Banco do Brasil'),
-    ('7896', '987654321', '2', 'Banco do Brasil'),
+    ('1234', '874287421', '1', 'Banco do Brasil'),
+    ('6754', '981212321', '6', 'Banco do Brasil'),
+    ('7896', '984343321', '2', 'Banco do Brasil'),
     ('3847', '987654321', '4', 'Banco do Brasil'),
-    ('5678', '937488383', '3', 'Santander'),
-    ('5678', '365995455', '7', 'Santander'),
-    ('5678', '345647678', '9', 'Santander'),
-    ('5678', '123456789', '1', 'Santander'),
-    ('4321', '789456123', '3', 'Caixa');
-    ('4545', '743543666', '3', 'Caixa');
-    ('3244', '234930559', '3', 'Caixa');
-    ('5678', '867546546', '7', 'Itaú'),
+    ('5658', '937488383', '3', 'Santander'),
+    ('5128', '365995455', '7', 'Santander'),
+    ('5638', '345647678', '9', 'Santander'),
+    ('5628', '123456789', '1', 'Santander'),
+    ('4321', '789456123', '3', 'Caixa'),
+    ('4545', '743543666', '3', 'Caixa'),
+    ('3244', '234930559', '3', 'Caixa'),
+    ('5608', '867546546', '7', 'Itaú'),
     ('5678', '435456546', '5', 'Itaú'),
-    ('5678', '453543546', '3', 'Itaú'),
-    ('5678', '123456789', '2', 'Itaú'),
+    ('5878', '453543546', '3', 'Itaú'),
+    ('2338', '092738489', '2', 'Itaú');
+
+INSERT INTO equipes (id, nome_da_equipe, descricao, observacoes) VALUES
+    (null, 'Moléculas Inovadoras', 'Pesquisa em genética e biologia molecular para avanços na medicina', 'Equipe altamente especializada em técnicas de sequenciamento de DNA'),
+    (null, 'AlgCog', 'Desenvolvimento de algoritmos avançados para soluções em IA', 'Colaborações com instituições acadêmicas e empresas de tecnologia'),
+    (null, 'GreenEnergy', 'Pesquisa em fontes de energia sustentáveis e tecnologias limpas', 'Projetos em parceria com indústrias de energia renovável'),
+    (null, 'EcossisGuard', 'Estudo de ecossistemas e conservação da biodiversidade', 'Participação ativa em projetos de preservação ambiental'),
+    (null, 'NanoInova', 'Pesquisa em materiais e dispositivos nanoestruturados', 'Publicações em revistas científicas de renome na área'),
+    (null, 'AstroFusion', 'Estudo do universo, galáxias e fenômenos cósmicos', 'Participação em observatórios internacionais'),
+    (null, 'CogNitro', 'Pesquisa em processos mentais, memória e tomada de decisão', 'Colaborações com clínicas de neurologia'),
+    (null, 'EngeneX', 'Manipulação genética para aplicações médicas e agrícolas', 'Desenvolvimento de terapias gênicas inovadoras'),
+    (null, 'ArqueoTech', 'Escavações e estudo de civilizações antigas', 'Descobertas arqueológicas em sítios históricos importantes'),
+    (null, 'NeuroDynamics', 'Estudo do sistema nervoso e neuroplasticidade', 'Pesquisas com potencial aplicação em reabilitação neurológica'),
+    (null, 'QuímicaInova', 'Síntese de compostos orgânicos e desenvolvimento de novos materiais', 'Publicações em revistas especializadas em química'),
+    (null, 'DataInsight Labs', 'Análise de grandes conjuntos de dados para insights científicos', 'Colaborações com empresas para aplicação prática de descobertas'),
+    (null, 'PartículasInov', 'Pesquisa em partículas elementares e física de alta energia', 'Participação em experimentos em aceleradores de partículas'),
+    (null, 'LinguaTech', 'Estudo da linguagem natural e processamento de linguagem natural', 'Desenvolvimento de algoritmos para reconhecimento de voz'),
+    (null, 'SoloTech', 'Investigação em propriedades do solo e sustentabilidade agrícola', 'Projetos em parceria com fazendas e instituições agrícolas');
+
+INSERT INTO relatorio_tecnico (idrelatorio_tecnico, titulo, resumo, relatorio, equipe_idequipe) VALUES
+    (null, 'Avanços na Genética Molecular', 'Estudo sobre as últimas descobertas em genética molecular', 'O relatório aborda avanços significativos nas pesquisas relacionadas à genética molecular, destacando descobertas e técnicas inovadoras.', 1),
+    (null, 'Algoritmos Avançados em IA', 'Desenvolvimento e aplicação de algoritmos para soluções em IA', 'Este relatório técnico destaca o desenvolvimento de algoritmos avançados e sua aplicação em soluções práticas de inteligência artificial.', 2),
+    (null, 'Sustentabilidade em Energias Renováveis', 'Pesquisa sobre fontes de energia sustentáveis', 'O relatório aborda os projetos de pesquisa em fontes de energia sustentáveis, com ênfase em colaborações com indústrias de energia renovável.', 3),
+    (null, 'Conservação da Biodiversidade', 'Estudo de ecossistemas para a preservação ambiental', 'Este relatório destaca a participação ativa da equipe em projetos de conservação da biodiversidade e preservação ambiental.', 4),
+    (null, 'Inovações em Nanotecnologia', 'Pesquisa em materiais nanoestruturados', 'O relatório destaca as pesquisas recentes em materiais nanoestruturados, incluindo publicações em revistas científicas de renome na área.', 5),
+    (null, 'Explorações Astrofísicas', 'Estudo do universo e fenômenos cósmicos', 'Este relatório aborda as contribuições da equipe nas explorações astrofísicas, incluindo participação em observatórios internacionais.', 6),
+    (null, 'Processos Mentais e Tomada de Decisão', 'Pesquisa em psicologia cognitiva', 'O relatório destaca as pesquisas em processos mentais, memória e tomada de decisão, com colaborações importantes com clínicas de neurologia.', 7),
+    (null, 'Manipulação Genética Avançada', 'Pesquisa em manipulação genética para aplicações médicas e agrícolas', 'Este relatório técnico destaca o desenvolvimento de terapias gênicas inovadoras e aplicações em medicina e agricultura.', 8),
+    (null, 'Arqueologia e Descobertas Antigas', 'Escavações e estudo de civilizações antigas', 'O relatório destaca as escavações e descobertas arqueológicas da equipe em sítios históricos importantes.', 9),
+    (null, 'Neurociência e Neuroplasticidade', 'Estudo do sistema nervoso e plasticidade cerebral', 'Este relatório técnico destaca as pesquisas em neurociência, com potencial aplicação em reabilitação neurológica e cuidados de saúde.', 10),
+    (null, 'Inovações em Química Orgânica', 'Síntese de compostos orgânicos e desenvolvimento de materiais', 'O relatório aborda a síntese de compostos orgânicos e o desenvolvimento de novos materiais, com publicações em revistas especializadas.', 11),
+    (null, 'Análise Avançada de Dados', 'Utilização de grandes conjuntos de dados para insights científicos', 'Este relatório destaca a análise de grandes conjuntos de dados para obter insights científicos, com colaborações com empresas para aplicação prática.', 12),
+    (null, 'Física de Partículas e Experimentos', 'Pesquisa em partículas elementares e física de alta energia', 'O relatório aborda as pesquisas em física de partículas, incluindo a participação em experimentos em aceleradores de partículas.', 13),
+    (null, 'Linguística Computacional e Reconhecimento de Voz', 'Estudo da linguagem natural e desenvolvimento de algoritmos', 'Este relatório técnico destaca os estudos em linguística computacional, incluindo o desenvolvimento de algoritmos para reconhecimento de voz.', 14),
+    (null, 'Ciências do Solo e Sustentabilidade Agrícola', 'Investigação em propriedades do solo e práticas agrícolas sustentáveis', 'O relatório aborda as pesquisas em ciências do solo e projetos em parceria com fazendas para promover a sustentabilidade agrícola.', 15);
+
+INSERT INTO pesquisador (idpesquisador, bairro_idbairro, nome, endereco, cep, cpf, data_de_ingresso, data_de_egresso, ativo, area_de_atuacao, id_lattes) VALUES
+    (null, 1, 'Josemar Rodrigues Souza', 'Rua A, 123', '35500221', '13043382072', '2005-05-01', null, 1, 'Genética Molecular', '5463076295727564'),
+    (null, 2, 'Marco Antônio Costa Simões', 'Rua B, 456', '23456789', '23456789012', '2007-02-32', null, 1, 'IA e Algoritmos', '0319800678858096'),
+    (null, 3, 'Ana Patrícia Magalhães', 'Rua C, 789', '34567890', '34567890123', '2011-5-11', null, 1, 'Energias Renováveis', '9035802389892301'),
+    (null, 4, 'Robson Marinho', 'Rua D, 012', '45678901', '45678901234', '2010-05-02', null, 1, 'Conservação Ambiental', '3307568955007464'),
+    (null, 5, 'Jorge Campos', 'Rua E, 345', '56789012', '56789012345', '2007-11-02', null, 1, 'Nanotecnologia', '4851786390961391'),
+    (null, 6, 'Daniela Barreto', 'Rua F, 678', '67890123', '67890123456', '2002-12-24', null, 1, 'Astrofísica', '1442102224330280'),
+    (null, 7, 'Leandro Santos Coelho', 'Rua G, 901', '78901234', '78901234567', '2013-09-05', null, 1, 'Neurociência', '1474574195753600'),
+    (null, 8, 'Ernesto Massa', 'Rua H, 234', '89012345', '89012345678', '2020-09-03', null, 1, 'Genética Aplicada', '1849818303242939'),
+    (null, 9, 'Diego Suarez', 'Rua I, 567', '90123456', '90123456789', '2007-08-15', "2022-02-01", 0, 'Arqueologia', '1377022547816780'),
+    (null, 10, 'Carlos Helano', 'Rua J, 890', '01234567', '01234567890', '2012-12-01', null, 1, 'Neuroplasticidade', '1946944212498166'),
+    (null, 11, 'Alexandre Rafael Lenz', 'Rua K, 123', '12345678', '12345678901', '2012-02-24', null, 1, 'Química Orgânica', '9063268848566672'),
+    (null, 12, 'Cláudio Alves de Amorim', 'Rua L, 456', '23456789', '23456789012', '2003-05-20', null, 1, 'Ciência de Dados', '4976012823452609'),
+    (null, 13, 'Antônio Carlos Fontes Atta', 'Rua M, 789', '34567890', '34567890123', '2015-05-03', null, 1, 'Física de Partículas', '3591777818200356'),
+    (null, 14, 'Maria Inês Valderrama Restovic', 'Rua N, 012', '45678901', '45678901234', '2009-02-30', null, 1, 'Linguística Computacional', '3352656018233063'),
+    (null, 15, 'Gerusa Soares Pinheiro', 'Rua O, 345', '56789012', '56789012345', '2002-08-26', null, 1, 'Agronomia', '0699272930614987');
+
+INSERT INTO projeto (idprojeto, equipe_idequipe, título, descrição, aprovado) VALUES
+    (null, 1, 'Projeto Genoma Humano', 'Sequenciamento do genoma humano para avanços na medicina', 1),
+    (null, 2, 'Desenvolvimento de Algoritmos Avançados', 'Criação de algoritmos inovadores para soluções em IA', 1),
+    (null, 3, 'Pesquisa em Energias Renováveis', 'Estudo de fontes de energia sustentáveis e tecnologias limpas', 1),
+    (null, 4, 'Conservação da Biodiversidade', 'Projetos para a preservação de ecossistemas e biodiversidade', 1),
+    (null, 5, 'Pesquisa em Nanotecnologia', 'Desenvolvimento de materiais e dispositivos nanoestruturados', 1),
+    (null, 6, 'Exploração Astrofísica', 'Estudo do universo, galáxias e fenômenos cósmicos', 1),
+    (null, 7, 'CogNitro: Avanços em Neurociência', 'Pesquisa em processos mentais, memória e tomada de decisão', 0),
+    (null, 8, 'EngeneX: Manipulação Genética', 'Desenvolvimento de terapias gênicas inovadoras', 1),
+    (null, 9, 'ArqueoTech: Descobertas Antigas', 'Escavações e estudo de civilizações antigas', 0),
+    (null, 10, 'NeuroDynamics: Estudo do Sistema Nervoso', 'Pesquisas sobre o sistema nervoso e neuroplasticidade', 1),
+    (null, 11, 'QuímicaInova: Desenvolvimento de Materiais', 'Síntese de compostos orgânicos e desenvolvimento de novos materiais', 1),
+    (null, 12, 'DataInsight Labs: Análise de Dados', 'Análise de grandes conjuntos de dados para insights científicos', 1),
+    (null, 13, 'PartículasInov: Física de Partículas', 'Pesquisa em partículas elementares e física de alta energia', 1),
+    (null, 14, 'LinguaTech: Processamento de Linguagem Natural', 'Estudo da linguagem natural e processamento de linguagem natural', 0),
+    (null, 15, 'SoloTech: Sustentabilidade Agrícola', 'Investigação em propriedades do solo e práticas agrícolas sustentáveis', 0);

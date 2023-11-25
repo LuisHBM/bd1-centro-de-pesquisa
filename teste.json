@@ -1,0 +1,94 @@
+{
+  "equipes": [
+    {
+      "id": null,
+      "nome_da_equipe": "Moléculas Inovadoras",
+      "descricao": "Pesquisa em genética e biologia molecular para avanços na medicina",
+      "observacoes": "Equipe altamente especializada em técnicas de sequenciamento de DNA"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "AlgCog",
+      "descricao": "Desenvolvimento de algoritmos avançados para soluções em IA",
+      "observacoes": "Colaborações com instituições acadêmicas e empresas de tecnologia"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "Energia Verde Tech",
+      "descricao": "Pesquisa em fontes de energia sustentáveis e tecnologias limpas",
+      "observacoes": "Projetos em parceria com indústrias de energia renovável"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "EcossisGuard",
+      "descricao": "Estudo de ecossistemas e conservação da biodiversidade",
+      "observacoes": "Participação ativa em projetos de preservação ambiental"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "NanoInova",
+      "descricao": "Pesquisa em materiais e dispositivos nanoestruturados",
+      "observacoes": "Publicações em revistas científicas de renome na área"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "AstroFusion",
+      "descricao": "Estudo do universo, galáxias e fenômenos cósmicos",
+      "observacoes": "Participação em observatórios internacionais"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "CogNitro",
+      "descricao": "Pesquisa em processos mentais, memória e tomada de decisão",
+      "observacoes": "Colaborações com clínicas de neurologia"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "EngeneX",
+      "descricao": "Manipulação genética para aplicações médicas e agrícolas",
+      "observacoes": "Desenvolvimento de terapias gênicas inovadoras"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "ArqueoTech",
+      "descricao": "Escavações e estudo de civilizações antigas",
+      "observacoes": "Descobertas arqueológicas em sítios históricos importantes"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "NeuroDynamics",
+      "descricao": "Estudo do sistema nervoso e neuroplasticidade",
+      "observacoes": "Pesquisas com potencial aplicação em reabilitação neurológica"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "QuímicaInova",
+      "descricao": "Síntese de compostos orgânicos e desenvolvimento de novos materiais",
+      "observacoes": "Publicações em revistas especializadas em química"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "DataInsight Labs",
+      "descricao": "Análise de grandes conjuntos de dados para insights científicos",
+      "observacoes": "Colaborações com empresas para aplicação prática de descobertas"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "PartículasInov",
+      "descricao": "Pesquisa em partículas elementares e física de alta energia",
+      "observacoes": "Participação em experimentos em aceleradores de partículas"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "LinguaTech",
+      "descricao": "Estudo da linguagem natural e processamento de linguagem natural",
+      "observacoes": "Desenvolvimento de algoritmos para reconhecimento de voz"
+    },
+    {
+      "id": null,
+      "nome_da_equipe": "SoloTech",
+      "descricao": "Investigação em propriedades do solo e sustentabilidade agrícola",
+      "observacoes": "Projetos em parceria com fazendas e instituições agrícolas"
+    }
+  ]
+}
