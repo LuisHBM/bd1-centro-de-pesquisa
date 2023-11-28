@@ -1,3 +1,5 @@
+-- INSERTS NAS TABELAS
+
 INSERT INTO centro_de_pesquisa.estado (nome) VALUES
     ('Bahia'),
     ('Sao Paulo'),
@@ -291,8 +293,21 @@ INSERT INTO investidor (nome, cnpj, proposta) VALUES
     ('Lenovo', '78901234567890', 'Apoio em analise de dados e insights científicos'),
     ('Ferrari', '34567890123456', 'Investimento em pesquisas de partículas elementares e física de alta energia'),
     ('SpaceX', '01234567890123', 'Apoio financeiro para desenvolvimento de reconhecimento de voz'),
-    ('Pepsi', '90123456789012', 'Financiamento em pesquisas sobre propriedades do solo e sustentabilidade agrícola');
+    ('Pepsi', '90123456789012', 'Financiamento em pesquisas sobre propriedades do solo e sustentabilidade agrícola'),
+    ('Uneb', '87123432123121', 'Projeto de iniciação cientifica com futebol de robôs');
 
 INSERT INTO equipe_has_investidor (equipe_idequipe, investidor_idinvestidor) VALUES
     (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
     (11, 11), (12, 12), (13, 13), (14, 14), (15, 15);
+
+
+-- DELETE E UPDATE
+
+UPDATE investidor 
+SET cnpj = '11111111111111'
+WHERE idinvestidor = 16;
+
+DELETE FROM investidor
+WHERE idinvestidor = 16;
+
+
