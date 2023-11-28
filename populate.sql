@@ -49,7 +49,7 @@ INSERT INTO centro_de_pesquisa.bairro (cidade_idcidade, nome) VALUES
     (14, 'Renascença'),
     (15, 'Asa Sul');
 
-INSERT INTO centro_de_pesquisa.`conta corrente` (agência, conta, digito_verificador, nome_do_banco) VALUES
+INSERT INTO centro_de_pesquisa.conta_corrente (agencia, conta, digito_verificador, nome_do_banco) VALUES
     ('1234', '874287421', '1', 'Banco do Brasil'),
     ('6754', '981212321', '6', 'Banco do Brasil'),
     ('7896', '984343321', '2', 'Banco do Brasil'),
@@ -130,15 +130,15 @@ INSERT INTO projeto (idprojeto, equipe_idequipe, título, descrição, aprovado)
     (null, 4, 'Conservaçao da Biodiversidade', 'Projetos para a preservaçao de ecossistemas e biodiversidade', 1),
     (null, 5, 'Pesquisa em Nanotecnologia', 'Desenvolvimento de materiais e dispositivos nanoestruturados', 1),
     (null, 6, 'Exploraçao Astrofísica', 'Estudo do universo, galaxias e fenômenos cósmicos', 1),
-    (null, 7, 'CogNitro: Avanços em Neurociência', 'Pesquisa em processos mentais, memória e tomada de decisao', 0),
-    (null, 8, 'EngeneX: Manipulaçao Genética', 'Desenvolvimento de terapias gênicas inovadoras', 1),
-    (null, 9, 'ArqueoTech: Descobertas Antigas', 'Escavações e estudo de civilizações antigas', 0),
-    (null, 10, 'NeuroDynamics: Estudo do Sistema Nervoso', 'Pesquisas sobre o sistema nervoso e neuroplasticidade', 1),
-    (null, 11, 'QuímicaInova: Desenvolvimento de Materiais', 'Síntese de compostos orgânicos e desenvolvimento de novos materiais', 1),
-    (null, 12, 'DataInsight Labs: Analise de Dados', 'Analise de grandes conjuntos de dados para insights científicos', 1),
-    (null, 13, 'PartículasInov: Física de Partículas', 'Pesquisa em partículas elementares e física de alta energia', 1),
-    (null, 14, 'LinguaTech: Processamento de Linguagem Natural', 'Estudo da linguagem natural e processamento de linguagem natural', 0),
-    (null, 15, 'SoloTech: Sustentabilidade Agrícola', 'Investigaçao em propriedades do solo e praticas agrícolas sustentaveis', 0);
+    (null, 7, 'Avanços em Neurociência', 'Pesquisa em processos mentais, memória e tomada de decisao', 0),
+    (null, 8, 'Manipulaçao Genética', 'Desenvolvimento de terapias gênicas inovadoras', 1),
+    (null, 9, 'Descobertas Antigas', 'Escavações e estudo de civilizações antigas', 0),
+    (null, 10, 'Estudo do Sistema Nervoso', 'Pesquisas sobre o sistema nervoso e neuroplasticidade', 1),
+    (null, 11, 'Desenvolvimento de Materiais', 'Síntese de compostos orgânicos e desenvolvimento de novos materiais', 1),
+    (null, 12, 'Analise de Dados', 'Analise de grandes conjuntos de dados para insights científicos', 1),
+    (null, 13, 'Física de Partículas', 'Pesquisa em partículas elementares e física de alta energia', 1),
+    (null, 14, 'Processamento de Linguagem Natural', 'Estudo da linguagem natural e processamento de linguagem natural', 0),
+    (null, 15, 'Sustentabilidade Agrícola', 'Investigaçao em propriedades do solo e praticas agrícolas sustentaveis', 0);
 
 INSERT INTO subprojeto (projeto_idprojeto, título, justificativa, objetivo, metodologia, referencias) VALUES
     (1, 'Sequenciamento de Regiões Genômicas Específicas', 'Identificar regiões genômicas de interesse para tratamentos médicos específicos.', 'Realizar o sequenciamento detalhado de regiões genômicas específicas para avançar em tratamentos médicos.', 'Sequenciamento de última geraçao e analise bioinformatica avançada.', 'Watson, J. et al. (2021). Avanços no sequenciamento genômico.'),
@@ -157,7 +157,7 @@ INSERT INTO subprojeto (projeto_idprojeto, título, justificativa, objetivo, met
     (14, 'Desenvolvimento de Modelos de Processamento de Linguagem', 'Construir modelos avançados para compreensao e geraçao de linguagem natural.', 'Desenvolver modelos de processamento de linguagem natural mais eficazes.', 'Aprendizado de maquina e redes neurais para processamento de texto.', 'Miller, D. et al. (2022). Processamento de linguagem natural.'),
     (15, 'Estudo de Qualidade do Solo em Diferentes Praticas Agrícolas', 'Analisar a qualidade do solo em métodos agrícolas sustentaveis.', 'Avaliar o impacto de diferentes praticas agrícolas na saúde do solo.', 'Analise química e biológica do solo em diferentes condições.', 'Harris, E. et al. (2020). Qualidade do solo e praticas agrícolas sustentaveis.');
 
-INSERT INTO aluno (matricula, nome, cpf, endereco, cep, ativo, equipe_idliga, `conta corrente_idconta corrente`, bairro_idbairro, data_de_ingresso, data_de_egresso, subprojeto_idsubprojeto, bolsista, id_lattes) VALUES
+INSERT INTO aluno (matricula, nome, cpf, endereco, cep, ativo, equipe_idequipe, `conta_corrente_idconta_corrente`, bairro_idbairro, data_de_ingresso, data_de_egresso, subprojeto_idsubprojeto, bolsista, id_lattes) VALUES
     (null , 'Alan Nascimento', '12365478901', 'Rua das Flores, 123', '23456789', 0, 3, 1, 2, '2022-01-15', '2023-03-20', 4, 1, '1234567890123456'),
     (null , 'Luis Henrique Magalhaes', '23458079123', 'Avenida Principal, 456', '34567890', 0, 7, 2, 1, '2021-09-20', '2023-11-21', 8, 1, '2345678901234567'),
     (null , 'Kalvin Albuquerque', '34567891234', 'Rua da Praia, 789', '45678901', 0, 11, 3, 5, '2023-03-10', '2023-09-21', 15, 1, '3456789012345678'),
@@ -203,7 +203,7 @@ INSERT INTO publicacao_has_pesquisador (publicacao_idpublicacao, pesquisador_idp
     (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
     (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (1, 16), (2, 17), (3, 18), (4, 19), (5, 20), (6, 21);
 
-INSERT INTO equipe_has_pesquisador (equipe_idliga, pesquisador_idpesquisador) VALUES
+INSERT INTO equipe_has_pesquisador (equipe_idequipe, pesquisador_idpesquisador) VALUES
     (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
     (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (1, 16), (2, 17), (3, 18), (4, 19), (5, 20), (6, 21);
 
@@ -224,7 +224,7 @@ INSERT INTO nota_fiscal (numero, data_da_emissao, tipo, emitente, impostos, valo
     ('NF901324', '2024-02-20', 'Serviço e Equipamento', 'VoiceTech Solutions', 3100.00, 15500.00, 'Pago', 'Reconhecimento de voz'),
     ('NF567430', '2024-03-12', 'Serviço e Equipamento', 'AgroTech Labs', 3200.00, 16000.00, 'Nao pago', 'Analise de qualidade do solo');
 
-INSERT INTO despesa (equipe_idliga, nota_fiscal_idnota_fiscal, descricao, observacoes, data) VALUES
+INSERT INTO despesa (equipe_idequipe, nota_fiscal_idnota_fiscal, descricao, observacoes, data) VALUES
     (1, 1, 'Sequenciamento genético avançado', null, '2023-01-15'),
     (2, 2, 'Consultoria em algoritmos de IA', null, '2023-02-20'),
     (3, 3, 'Consultoria em energia renovavel', null, '2023-03-10'),

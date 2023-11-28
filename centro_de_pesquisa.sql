@@ -94,16 +94,16 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `centro_de_pesquisa`.`conta corrente`
+-- Table `centro_de_pesquisa`.`conta_corrente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`conta corrente` (
-  `idconta corrente` INT NOT NULL AUTO_INCREMENT,
-  `agência` VARCHAR(4) NOT NULL,
+CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`conta_corrente` (
+  `idconta_corrente` INT NOT NULL AUTO_INCREMENT,
+  `agencia` VARCHAR(4) NOT NULL,
   `conta` VARCHAR(9) NOT NULL,
   `digito_verificador` VARCHAR(1) NOT NULL,
   `nome_do_banco` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idconta corrente`),
-  INDEX `agência_UNIQUE` (`agência` ASC) VISIBLE,
+  PRIMARY KEY (`idconta_corrente`),
+  INDEX `agência_UNIQUE` (`agencia` ASC) VISIBLE,
   UNIQUE INDEX `conta_UNIQUE` (`conta` ASC) VISIBLE,
   INDEX `digito_verificador_UNIQUE` (`digito_verificador` ASC) VISIBLE,
   INDEX `nome_do_banco_UNIQUE` (`nome_do_banco` ASC) VISIBLE)
@@ -160,8 +160,8 @@ CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`aluno` (
   `endereco` VARCHAR(45) NOT NULL,
   `cep` VARCHAR(8) NOT NULL,
   `ativo` TINYINT NOT NULL,
-  `equipe_idliga` INT NOT NULL,
-  `conta corrente_idconta corrente` INT NULL,
+  `equipe_idequipe` INT NOT NULL,
+  `conta_corrente_idconta_corrente` INT NULL,
   `bairro_idbairro` INT NOT NULL,
   `data_de_ingresso` DATE NOT NULL,
   `data_de_egresso` VARCHAR(45) NULL,
@@ -169,20 +169,20 @@ CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`aluno` (
   `bolsista` TINYINT NOT NULL,
   `id_lattes` VARCHAR(16) NOT NULL,
   PRIMARY KEY (`matricula`),
-  INDEX `fk_aluno_equipe1_idx` (`equipe_idliga` ASC) VISIBLE,
-  INDEX `fk_aluno_conta corrente1_idx` (`conta corrente_idconta corrente` ASC) VISIBLE,
+  INDEX `fk_aluno_equipe1_idx` (`equipe_idequipe` ASC) VISIBLE,
+  INDEX `fk_aluno_conta_corrente1_idx` (`conta_corrente_idconta_corrente` ASC) VISIBLE,
   INDEX `fk_aluno_bairro1_idx` (`bairro_idbairro` ASC) VISIBLE,
   UNIQUE INDEX `matricula_UNIQUE` (`matricula` ASC) VISIBLE,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE,
   INDEX `fk_aluno_subprojeto1_idx` (`subprojeto_idsubprojeto` ASC) VISIBLE,
   CONSTRAINT `fk_aluno_equipe1`
-    FOREIGN KEY (`equipe_idliga`)
+    FOREIGN KEY (`equipe_idequipe`)
     REFERENCES `centro_de_pesquisa`.`equipe` (`idequipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_aluno_conta corrente1`
-    FOREIGN KEY (`conta corrente_idconta corrente`)
-    REFERENCES `centro_de_pesquisa`.`conta corrente` (`idconta corrente`)
+  CONSTRAINT `fk_aluno_conta_corrente1`
+    FOREIGN KEY (`conta_corrente_idconta_corrente`)
+    REFERENCES `centro_de_pesquisa`.`conta_corrente` (`idconta_corrente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_aluno_bairro1`
@@ -281,13 +281,13 @@ ENGINE = InnoDB;
 -- Table `centro_de_pesquisa`.`equipe_has_pesquisador`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`equipe_has_pesquisador` (
-  `equipe_idliga` INT NOT NULL,
+  `equipe_idequipe` INT NOT NULL,
   `pesquisador_idpesquisador` INT NOT NULL,
-  PRIMARY KEY (`equipe_idliga`, `pesquisador_idpesquisador`),
+  PRIMARY KEY (`equipe_idequipe`, `pesquisador_idpesquisador`),
   INDEX `fk_equipe_has_pesquisador_pesquisador1_idx` (`pesquisador_idpesquisador` ASC) VISIBLE,
-  INDEX `fk_equipe_has_pesquisador_equipe1_idx` (`equipe_idliga` ASC) VISIBLE,
+  INDEX `fk_equipe_has_pesquisador_equipe1_idx` (`equipe_idequipe` ASC) VISIBLE,
   CONSTRAINT `fk_equipe_has_pesquisador_equipe1`
-    FOREIGN KEY (`equipe_idliga`)
+    FOREIGN KEY (`equipe_idequipe`)
     REFERENCES `centro_de_pesquisa`.`equipe` (`idequipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -322,16 +322,16 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`despesa` (
   `iddespesa` INT NOT NULL AUTO_INCREMENT,
-  `equipe_idliga` INT NOT NULL,
+  `equipe_idequipe` INT NOT NULL,
   `nota_fiscal_idnota_fiscal` INT NULL,
   `descricao` TEXT NOT NULL,
   `observacoes` TEXT NULL,
   `data` DATE NOT NULL,
-  INDEX `fk_despesa_equipe1_idx` (`equipe_idliga` ASC) VISIBLE,
+  INDEX `fk_despesa_equipe1_idx` (`equipe_idequipe` ASC) VISIBLE,
   INDEX `fk_despesa_nota_fiscal1_idx` (`nota_fiscal_idnota_fiscal` ASC) VISIBLE,
   PRIMARY KEY (`iddespesa`),
   CONSTRAINT `fk_despesa_equipe1`
-    FOREIGN KEY (`equipe_idliga`)
+    FOREIGN KEY (`equipe_idequipe`)
     REFERENCES `centro_de_pesquisa`.`equipe` (`idequipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
