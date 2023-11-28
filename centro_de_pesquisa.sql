@@ -103,10 +103,10 @@ CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`conta corrente` (
   `digito_verificador` VARCHAR(1) NOT NULL,
   `nome_do_banco` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idconta corrente`),
-  UNIQUE INDEX `agência_UNIQUE` (`agência` ASC) VISIBLE,
+  INDEX `agência_UNIQUE` (`agência` ASC) VISIBLE,
   UNIQUE INDEX `conta_UNIQUE` (`conta` ASC) VISIBLE,
-  UNIQUE INDEX `digito_verificador_UNIQUE` (`digito_verificador` ASC) VISIBLE,
-  UNIQUE INDEX `nome_do_banco_UNIQUE` (`nome_do_banco` ASC) VISIBLE)
+  INDEX `digito_verificador_UNIQUE` (`digito_verificador` ASC) VISIBLE,
+  INDEX `nome_do_banco_UNIQUE` (`nome_do_banco` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -116,7 +116,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`projeto` (
   `idprojeto` INT NOT NULL AUTO_INCREMENT,
   `equipe_idequipe` INT NOT NULL,
-  `título` VARCHAR(45) NOT NULL,
+  `título` VARCHAR(80) NOT NULL,
   `descrição` LONGTEXT NOT NULL,
   `aprovado` TINYINT NOT NULL,
   PRIMARY KEY (`idprojeto`),
@@ -135,7 +135,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`subprojeto` (
   `idsubprojeto` INT NOT NULL AUTO_INCREMENT,
   `projeto_idprojeto` INT NOT NULL,
-  `título` VARCHAR(45) NOT NULL,
+  `título` VARCHAR(80) NOT NULL,
   `justificativa` MEDIUMTEXT NOT NULL,
   `objetivo` MEDIUMTEXT NOT NULL,
   `metodologia` MEDIUMTEXT NOT NULL,
@@ -154,7 +154,7 @@ ENGINE = InnoDB;
 -- Table `centro_de_pesquisa`.`aluno`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`aluno` (
-  `matricula` INT NOT NULL,
+  `matricula` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
   `endereco` VARCHAR(45) NOT NULL,
@@ -374,7 +374,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`investidor` (
   `idinvestidor` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
-  `cpnj` VARCHAR(14) NOT NULL,
+  `cnpj` VARCHAR(14) NOT NULL,
   `proposta` TEXT NOT NULL,
   PRIMARY KEY (`idinvestidor`))
 ENGINE = InnoDB;
@@ -407,7 +407,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `centro_de_pesquisa`.`relatorio_tecnico` (
   `idrelatorio_tecnico` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(45) NOT NULL,
+  `titulo` VARCHAR(80) NOT NULL,
   `resumo` VARCHAR(200) NULL,
   `relatorio` TEXT NOT NULL,
   `equipe_idequipe` INT NOT NULL,
