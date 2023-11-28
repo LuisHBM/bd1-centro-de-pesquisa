@@ -223,30 +223,91 @@ INSERT INTO equipe_has_pesquisador (equipe_idliga, pesquisador_idpesquisador) VA
     (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (1, 16), (2, 17), (3, 18), (4, 19), (5, 20), (6, 21);
 
 INSERT INTO nota_fiscal (numero, data_da_emissao, tipo, emitente, impostos, valor_total, status, observacoes) VALUES
-    ('987654321', '2023-10-15', 'Serviço', 'LabInnovate Solutions', 450.0, 2500.0, 'Pago', 'Sequenciamento completo de DNA'),
-    ('789456123', '2023-09-20', 'Serviço', 'ScientiTech Services', 320.0, 1800.0, 'Pago', 'Desenvolvimento de algoritmos de aprendizado de máquina'),
-    ('654789321', '2023-08-18', 'Serviço', 'BioGenius Solutions', 550.0, 3000.0, 'Pendente', 'Estudo de nanomateriais para medicina'),
-    ('987123654', '2023-07-25', 'Serviço', 'NanoVision Experts', 400.0, 2200.0, 'Processando', 'Análise de big data para insights científicos'),
-    ('456789987', '2023-06-30', 'Serviço', 'DataMinds Corporation', 480.0, 2700.0, 'Pago', 'Estudo de neuroplasticidade em condições neurológicas'),
-    ('321987654', '2023-05-18', 'Serviço', 'ResearchCrafters Ltd.', 600.0, 3500.0, 'Aguardando', 'Pesquisa em terapias gênicas para doenças hereditárias'),
-    ('987654123', '2023-04-12', 'Equipamento', 'NeuroNexa Innovations', 520.0, 2900.0, 'Pago', 'Equipamentos para coleta de dados de ondas gravitacionais'),
-    ('654789321', '2023-03-20', 'Equipamento', 'GenoQuest Services', 420.0, 2400.0, 'Pendente', 'Equipamentos para estudo de energia geotérmica para fontes sustentáveis'),
-    ('123987654', '2023-02-28', 'Equipamento', 'TechExplora Enterprises', 380.0, 2100.0, 'Pago', 'Equipamentos para monitoramento de espécies ameaçadas e seus habitats'),
-    ('987321654', '2023-01-10', 'Equipamento', 'AstroAnalytics Solutions', 500.0, 2800.0, 'Processando', 'Equipamentos para mapeamento neural de processos de decisão'),
-    ('321654987', '2022-12-20', 'Equipamento', 'EcoSustain Consultants', 430.0, 2500.0, 'Pago', 'Equipamentos para a análise de viabilidade de energia geotérmica'),
-    ('654987321', '2022-11-18', 'Equipamento', 'LabScape Innovations', 410.0, 2300.0, 'Aguardando', 'Equipamentos para realizar experimentos em física de partículas'),
-    ('789654123', '2022-10-30', 'Outro', 'HigienizaMaster', 470.0, 2600.0, 'Pago', 'Limpeza dos laboratórios'),
-    ('456321789', '2022-09-28', 'Outro', 'RenovaWorks Ltd.', 440.0, 2450.0, 'Processando', 'Aumento da sala de testes'),
-    ('123456789', '2022-08-15', 'Outro', 'CleanPro', 490.0, 2700.0, 'Pago', 'Coleta de lixo');
+    ('NF123456', '2023-01-15', 'Serviço e Equipamento', 'Genetix Inc.', 1500.00, 7500.00, 'Pago', 'Nota fiscal para serviço de sequenciamento genético'),
+    ('NF789012', '2023-02-20', 'Serviço e Equipamento', 'CogWorks Consultoria', 2000.00, 10000.00, 'Pago', 'Nota fiscal para consultoria em IA'),
+    ('NF345678', '2023-03-10', 'Serviço e Equipamento', 'GreenEco Solutions', 1800.00, 9000.00, 'Pago', 'Nota fiscal para consultoria em energia renovável'),
+    ('NF901234', '2023-04-05', 'Serviço e Equipamento', 'BioDive Research', 2100.00, 10500.00, 'Pago', 'Nota fiscal para estudo de ecossistemas marinhos'),
+    ('NF567890', '2023-05-12', 'Serviço e Equipamento', 'NanoLab Solutions', 2200.00, 11000.00, 'Pago', 'Nota fiscal para análise de nanomateriais'),
+    ('NF123456', '2023-06-20', 'Serviço e Equipamento', 'AstroTech Observatories', 2300.00, 11500.00, 'Pago', 'Nota fiscal para observações astronômicas'),
+    ('NF789012', '2023-07-01', 'Serviço e Equipamento', 'NeuroMind Diagnósticos', 2400.00, 12000.00, 'Pago', 'Nota fiscal para avaliação neuropsicológica'),
+    ('NF345678', '2023-08-18', 'Serviço e Equipamento', 'GeneCare Therapeutics', 2500.00, 12500.00, 'Pago', 'Nota fiscal para terapia gênica'),
+    ('NF901234', '2023-09-22', 'Serviço e Equipamento', 'ArchaeoDig Excavations', 2600.00, 13000.00, 'Pago', 'Nota fiscal para escavações arqueológicas'),
+    ('NF567890', '2023-10-05', 'Serviço e Equipamento', 'NeuroRehab Solutions', 2700.00, 13500.00, 'Pago', 'Nota fiscal para reabilitação neurológica avançada'),
+    ('NF123456', '2023-11-10', 'Serviço e Equipamento', 'ChemLab Synthesis', 2800.00, 14000.00, 'Pago', 'Nota fiscal para síntese de compostos orgânicos'),
+    ('NF789012', '2023-12-15', 'Serviço e Equipamento', 'DataScience Insights', 2900.00, 14500.00, 'Pago', 'Nota fiscal para análise de big data científico'),
+    ('NF345678', '2024-01-02', 'Serviço e Equipamento', 'Particle Labs Inc.', 3000.00, 15000.00, 'Pago', 'Nota fiscal para experimentos em física de partículas'),
+    ('NF901234', '2024-02-20', 'Serviço e Equipamento', 'VoiceTech Solutions', 3100.00, 15500.00, 'Pago', 'Nota fiscal para reconhecimento de voz'),
+    ('NF567890', '2024-03-12', 'Serviço e Equipamento', 'AgroTech Labs', 3200.00, 16000.00, 'Pago', 'Nota fiscal para análise de qualidade do solo');
 
 INSERT INTO despesa (equipe_idliga, nota_fiscal_idnota_fiscal, descricao, observacoes, data) VALUES
-    (1, 1, 'Reagentes para experimentos de DNA', 'Recebimento de dados de reagentes específicos para testes moleculares', '2023-10-05'),
-    (2, 2, 'Licença para software de IA', 'Aquisição de licença para plataforma de desenvolvimento em IA', '2023-09-10'),
-    (3, 3, 'Equipamentos de captação de energia solar', 'Compra de painéis solares e acessórios para estudo', '2023-08-08'),
-    (4, 4, 'Material para estudos de biodiversidade', 'Compra de equipamentos para análise de fauna e flora', '2023-07-25'),
-    (5, 5, 'Nanomateriais para experimentos', 'Aquisição de nanomateriais específicos para pesquisas', '2023-06-30'),
-    (6, 6, 'Telescópio para observação espacial', 'Aquisição de telescópio avançado para observações cósmicas', '2023-05-18'),
-    (3, 13, 'Limpeza do laboratório', 'Laboratório estava sujo depois de alguns experimentos', '2023-04-12'),
-    (1, 14, 'Expansão da sala de testes', 'Necessário para a realização de melhores testes', '2023-02-28');
-    (5, 15, 'Coleta de lixo', 'Coleta semanal de lixo', '2023-03-20');
+    (1, 1, 'Despesa relacionada ao serviço de sequenciamento genético avançado e ao equipamento Sequenciador de DNA Modelo X', 'Despesa referente ao equipamento de sequenciamento genético e seu serviço correspondente', '2023-01-15'),
+    (2, 2, 'Despesa relacionada ao serviço de consultoria em algoritmos de IA e ao equipamento Processador Quântico Avançado', 'Despesa referente ao equipamento de processamento quântico e sua consultoria correspondente', '2023-02-20'),
+    (3, 3, 'Despesa relacionada ao serviço de consultoria em energia renovável e ao equipamento Reator de Fusão Solar', 'Despesa referente ao equipamento de reator de fusão solar e sua consultoria correspondente', '2023-03-10'),
+    (4, 4, 'Despesa relacionada ao serviço de estudo de ecossistemas marinhos e ao equipamento Estação de Monitoramento Ambiental', 'Despesa referente ao equipamento de monitoramento ambiental e seu serviço correspondente', '2023-04-05'),
+    (5, 5, 'Despesa relacionada ao serviço de análise de nanomateriais e ao equipamento Microscópio de Força Atômica', 'Despesa referente ao equipamento de microscópio de força atômica e sua análise correspondente', '2023-05-12'),
+    (6, 6, 'Despesa relacionada ao serviço de observações astronômicas e ao equipamento Telescópio Espacial Multiespectral', 'Despesa referente ao equipamento de telescópio espacial e suas observações correspondentes', '2023-06-20'),
+    (7, 7, 'Despesa relacionada ao serviço de avaliação neuropsicológica e ao equipamento Neuroimager de Última Geração', 'Despesa referente ao equipamento de neuroimagem e sua avaliação correspondente', '2023-07-01'),
+    (8, 8, 'Despesa relacionada ao serviço de terapia gênica e ao equipamento Estufa de Cultivo de Células-Tronco', 'Despesa referente ao equipamento de estufa de cultivo e sua terapia correspondente', '2023-08-18'),
+    (9, 9, 'Despesa relacionada ao serviço de escavações arqueológicas e ao equipamento Scanner de Artefatos Arqueológicos', 'Despesa referente ao equipamento de scanner de artefatos e suas escavações correspondentes', '2023-09-22'),
+    (10, 10, 'Despesa relacionada ao serviço de reabilitação neurológica avançada e ao equipamento Equipamento de Estimulação Neural', 'Despesa referente ao equipamento de estimulação neural e sua reabilitação correspondente', '2023-10-05'),
+    (11, 11, 'Despesa relacionada ao serviço de síntese de compostos orgânicos e ao equipamento Laboratório de Síntese Química Avançada', 'Despesa referente ao equipamento de laboratório de síntese e sua composição correspondente', '2023-11-10'),
+    (12, 12, 'Despesa relacionada ao serviço de análise de big data científico e ao equipamento Plataforma de Análise de Big Data', 'Despesa referente ao equipamento de análise de big data e sua plataforma correspondente', '2023-12-15'),
+    (13, 13, 'Despesa relacionada ao serviço de experimentos em física de partículas e ao equipamento Detector de Partículas de Alta Energia', 'Despesa referente ao equipamento de detector de partículas e seus experimentos correspondentes', '2024-01-02'),
+    (14, 14, 'Despesa relacionada ao serviço de reconhecimento de voz e ao equipamento Sistema de Reconhecimento de Voz Inteligente', 'Despesa referente ao equipamento de reconhecimento de voz e seu sistema correspondente', '2024-02-20'),
+    (15, 15, 'Despesa relacionada ao serviço de análise de qualidade do solo e ao equipamento Sensor de Qualidade do Solo', 'Despesa referente ao equipamento de sensor de solo e sua análise correspondente', '2024-03-12');
 
+
+INSERT INTO equipamento (equipe_idequipe, nome, observacao, despesa_iddespesa) VALUES
+    (1, 'Sequenciador de DNA Modelo X', 'Equipamento de ponta para sequenciamento genético', 1),
+    (2, 'Processador Quântico Avançado', 'Para simulações complexas em IA e aprendizado de máquina', 2),
+    (3, 'Reator de Fusão Solar', 'Pesquisa em fontes de energia limpa', 3),
+    (4, 'Estação de Monitoramento Ambiental', 'Análise de ecossistemas e biodiversidade', 4),
+    (5, 'Microscópio de Força Atômica', 'Para estudo de nanoestruturas', 5),
+    (6, 'Telescópio Espacial Multiespectral', 'Observações astronômicas avançadas', 6),
+    (7, 'Neuroimager de Última Geração', 'Mapeamento cerebral avançado', 7),
+    (8, 'Estufa de Cultivo de Células-Tronco', 'Pesquisa em terapias genéticas', 8),
+    (9, 'Scanner de Artefatos Arqueológicos', 'Digitalização de artefatos antigos', 9),
+    (10, 'Equipamento de Estimulação Neural', 'Pesquisa em plasticidade neural', 10),
+    (11, 'Laboratório de Síntese Química Avançada', 'Síntese de compostos complexos', 11),
+    (12, 'Plataforma de Análise de Big Data', 'Análise de dados para descobertas científicas', 12),
+    (13, 'Detector de Partículas de Alta Energia', 'Pesquisa em física de partículas', 13),
+    (14, 'Sistema de Reconhecimento de Voz Inteligente', 'Para aplicativos de IA', 14),
+    (15, 'Sensor de Qualidade do Solo', 'Monitoramento de propriedades do solo', 15);
+
+INSERT INTO servico (despesa_iddespesa, nome, observacao, fornecedor, descricao) VALUES
+    (1, 'Sequenciamento Genético Avançado', 'Análise de sequências genéticas complexas', 'Genetix Inc.', 'Serviço de sequenciamento genético avançado'),
+    (2, 'Consultoria em Algoritmos de IA', 'Desenvolvimento e consultoria em algoritmos de IA', 'CogWorks Consultoria', 'Consultoria especializada em algoritmos de inteligência artificial'),
+    (3, 'Consultoria em Energia Renovável', 'Soluções de energia limpa e sustentável', 'GreenEco Solutions', 'Consultoria para implementação de tecnologias de energia sustentável'),
+    (4, 'Estudo de Ecossistemas Marinhos', 'Análise e preservação de ecossistemas aquáticos', 'BioDive Research', 'Pesquisa em ecossistemas marinhos'),
+    (5, 'Análise de Nanomateriais', 'Caracterização e análise de nanoestruturas', 'NanoLab Solutions', 'Análise de propriedades de nanomateriais'),
+    (6, 'Observações Astronômicas', 'Observações astronômicas avançadas', 'AstroTech Observatories', 'Serviço de observação astronômica'),
+    (7, 'Avaliação Neuropsicológica', 'Avaliação e diagnóstico neuropsicológico', 'NeuroMind Diagnósticos', 'Serviços de avaliação neuropsicológica'),
+    (8, 'Terapia Gênica', 'Desenvolvimento e aplicação de terapias genéticas', 'GeneCare Therapeutics', 'Serviço de terapia gênica'),
+    (9, 'Escavações Arqueológicas', 'Escavações em sítios arqueológicos importantes', 'ArchaeoDig Excavations', 'Serviço de escavações arqueológicas'),
+    (10, 'Reabilitação Neurológica Avançada', 'Tratamentos avançados de reabilitação neurológica', 'NeuroRehab Solutions', 'Serviço de reabilitação neurológica'),
+    (11, 'Síntese de Compostos Orgânicos', 'Produção de compostos orgânicos especializados', 'ChemLab Synthesis', 'Serviço de síntese de compostos orgânicos'),
+    (12, 'Análise de Big Data Científico', 'Análise de conjuntos de dados para insights científicos', 'DataScience Insights', 'Serviço de análise de big data científico'),
+    (13, 'Experimentos em Física de Partículas', 'Participação em experimentos de física de partículas', 'Particle Labs Inc.', 'Serviço de experimentos em física de partículas'),
+    (14, 'Reconhecimento de Voz', 'Desenvolvimento de algoritmos de reconhecimento de voz', 'VoiceTech Solutions', 'Serviço de reconhecimento de voz avançado'),
+    (15, 'Análise de Qualidade do Solo', 'Análise de propriedades do solo para agricultura', 'AgroTech Labs', 'Serviço de análise de qualidade do solo');
+
+INSERT INTO investidor (nome, cnpj, proposta) VALUES
+    ('Genoma Ventures', '12345678901234', 'Investimento em pesquisas relacionadas à genética e biologia molecular'),
+    ('AI Nexus Capital', '98765432109876', 'Apoio financeiro para desenvolvimento de algoritmos avançados em IA'),
+    ('EcoEnergetic Fund', '45678901234567', 'Investimento em soluções de energia limpa e tecnologias sustentáveis'),
+    ('Biodiversity Guardians', '78901234567890', 'Apoio a estudos e projetos voltados para conservação da biodiversidade'),
+    ('NanoGen Innovations', '23456789012345', 'Financiamento em pesquisa de materiais nanoestruturados'),
+    ('Cosmic Discoveries Group', '89012345678901', 'Investimento em estudos e exploração do universo e fenômenos cósmicos'),
+    ('NeuroTech Partners', '56789012345678', 'Apoio financeiro para pesquisas em processos mentais e neurologia'),
+    ('GeneGenius Investments', '90123456789012', 'Investimento em pesquisas de terapias genéticas inovadoras'),
+    ('AncientWorld Backers', '34567890123456', 'Apoio a escavações e estudos de civilizações antigas'),
+    ('NeuralRehab Finances', '67890123456789', 'Investimento em pesquisas de reabilitação neurológica'),
+    ('ChemInnoLab Fund', '01234567890123', 'Financiamento em síntese de compostos orgânicos e novos materiais'),
+    ('DataSavvy Ventures', '78901234567890', 'Apoio em análise de dados e insights científicos'),
+    ('Quantum Particle Financiers', '34567890123456', 'Investimento em pesquisas de partículas elementares e física de alta energia'),
+    ('VocaSense Investors', '01234567890123', 'Apoio financeiro para desenvolvimento de reconhecimento de voz'),
+    ('AgroSustain Holdings', '90123456789012', 'Financiamento em pesquisas sobre propriedades do solo e sustentabilidade agrícola');
+
+INSERT INTO equipe_has_investidor (equipe_idequipe, investidor_idinvestidor) VALUES
+    (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
+    (11, 11), (12, 12), (13, 13), (14, 14), (15, 15);
